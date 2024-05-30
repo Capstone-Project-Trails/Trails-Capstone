@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Trails</string>
+    <string name="desc_logo">The best recommendation destination \n application for you</string>
+
+    <string name="title_onboarding_1">Explore All Place</string>
+    <string name="desc_onboarding_1">Discover a vast array of tourist attractions, \n accommodations, restaurants, and local activities across various destinations.</string>
+    <string name="title_onboarding_2">Search Your Destination</string>
+    <string name="desc_onboarding_2">Refine your exploration with customizable search filters based on price, location, and attraction type.</string>
+    <string name="title_onboarding_3">AI Recommendations</string>
+    <string name="desc_onboarding_3">Engage with the AI chat feature for broader and more precise recommendations tailored to your interests.</string>
+    <string name="next_button">Next</string>
+    <string name="back_button">Back</string>
+    <string name="cd_image_onboarding">image onboarding</string>
+    <string name="cd_logo_application">Logo Application</string>
 </resources>
