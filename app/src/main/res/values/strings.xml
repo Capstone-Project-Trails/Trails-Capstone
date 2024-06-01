@@ -12,4 +12,13 @@
     <string name="back_button">Back</string>
     <string name="cd_image_onboarding">image onboarding</string>
     <string name="cd_logo_application">Logo Application</string>
+    <string name="continue_with_google">Continue With Google</string>
+    <string name="welcome_title">Welcome To Trails!</string>
+    <string name="welcome_desc">Please login to your account or create new account to continue</string>
+    <string name="picture_beach">picture beach</string>
+    <string name="your_location">Your Location</string>
+    <string name="location">Location Not Found</string>
+    <string name="hello">Hello, Budi</string>
+    <string name="home_title">Lets Explore New Experience With Us!</string>
+    <string name="search_placeholder">Where do you want to go?</string>
 </resources>
