@@ -5,26 +5,37 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.bangkit.trails.databinding.ActivityHomeBinding
+import com.bangkit.trails.R
+import com.bangkit.trails.databinding.FragmentHomeBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import java.util.Locale
 
-class HomeActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHomeBinding
+class HomeFragment : Fragment() {
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding as FragmentHomeBinding
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
+        // Inflate the layout for this fragment
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
 
-        binding = ActivityHomeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         getMyLocation()
     }
 
@@ -47,7 +58,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun checkPermission(permission: String): Boolean {
         return ContextCompat.checkSelfPermission(
-            this,
+            requireActivity(),
             permission
         ) == PackageManager.PERMISSION_GRANTED
     }
@@ -58,15 +69,19 @@ class HomeActivity : AppCompatActivity() {
         ) {
             fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
                 if (location != null) {
-                    val gcd = Geocoder(this, Locale.getDefault())
+                    val gcd = Geocoder(requireActivity(), Locale.getDefault())
                     val addresses = gcd.getFromLocation(location.latitude, location.longitude, 1)
                     if (addresses!!.size > 0) {
                         binding.location.text =
-                            "${addresses[0].subAdminArea}, ${addresses[0].countryName}"
+                            getString(
+                                R.string.location_value,
+                                addresses[0].subAdminArea,
+                                addresses[0].countryName
+                            )
                     }
                 } else {
                     Toast.makeText(
-                        this,
+                        requireActivity(),
                         "Location is not found. Try Again",
                         Toast.LENGTH_SHORT
                     ).show()
@@ -80,5 +95,10 @@ class HomeActivity : AppCompatActivity() {
                 )
             )
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

@@ -21,4 +21,8 @@
     <string name="hello">Hello, Budi</string>
     <string name="home_title">Lets Explore New Experience With Us!</string>
     <string name="search_placeholder">Where do you want to go?</string>
+
+    <string name="location_value">%1$s, %2$s</string>
+    <string name="home_bottombar">home</string>
+    <string name="profile_bottombar">profile</string>
 </resources>
