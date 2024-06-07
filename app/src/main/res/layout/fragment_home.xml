@@ -101,7 +101,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="32dp"
@@ -118,6 +118,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Nearby"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nearby_image"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="32dp"
+        app:cardCornerRadius="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nearby">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/beach_afternoon" />
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
