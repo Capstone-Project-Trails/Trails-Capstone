@@ -1,6 +1,7 @@
 package com.bangkit.trails.ui.home
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
@@ -14,6 +15,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.bangkit.trails.R
 import com.bangkit.trails.databinding.FragmentHomeBinding
+import com.bangkit.trails.ui.detail.DetailActivity
+import com.bangkit.trails.ui.search.SearchActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import java.util.Locale
@@ -37,6 +40,16 @@ class HomeFragment : Fragment() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         getMyLocation()
+
+        binding.search.setOnClickListener {
+            val intent = Intent(requireActivity(), SearchActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.nearbyImage.setOnClickListener {
+            val intent = Intent(requireActivity(), DetailActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private val requestPermissionLauncher = registerForActivityResult(

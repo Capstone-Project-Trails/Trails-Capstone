@@ -1,6 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#FFFFFF" />
-    <corners android:radius="50dp"/>
+    <solid android:color="@color/blue_button" /> <!-- Change this to your desired background color -->
     <padding
         android:left="8dp"
         android:top="8dp"

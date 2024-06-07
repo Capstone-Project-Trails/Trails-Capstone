@@ -1,12 +1,15 @@
-package com.bangkit.trails
+package com.bangkit.trails.ui.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.bangkit.trails.R
 import com.bangkit.trails.databinding.ActivityMainBinding
+import com.bangkit.trails.ui.aichat.AIChatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -35,5 +38,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         navView.setupWithNavController(navController)
+
+        binding.fabAi.setOnClickListener {
+            val intent = Intent(this, AIChatActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
