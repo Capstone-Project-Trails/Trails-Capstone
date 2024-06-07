@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -52,12 +53,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_fav"
+        android:id="@+id/fab_ai"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/blue_button"
-        android:contentDescription="Ketuk untuk ke AI Chat"
+        android:contentDescription="@string/cd_ai_chat"
         android:foregroundGravity="bottom"
         android:scaleType="center"
         app:fabCustomSize="80dp"
