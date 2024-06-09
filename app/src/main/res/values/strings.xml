@@ -23,8 +23,8 @@
     <string name="search_placeholder">Where do you want to go?</string>
 
     <string name="location_value">%1$s, %2$s</string>
-    <string name="home_bottombar">home</string>
-    <string name="profile_bottombar">profile</string>
+    <string name="home_bottombar">Home</string>
+    <string name="profile_bottombar">Profile</string>
     <string name="cd_ai_chat">Ketuk untuk ke AI Chat</string>
 
     <string name="info_logout">Are you sure you want to log out of this account?</string>
@@ -48,4 +48,7 @@
     <string name="sort_by">Sort by</string>
     <string name="cd_search_filter">search filter</string>
     <string name="popular_destination">Popular Destination</string>
+    <string name="web_client_id">476530847707-f2f9nrqc57bbqiu3ml96hnjm4mf35eh3.apps.googleusercontent.com</string>
+    <string name="home_hello">Hello, %1$s</string>
+    <string name="location_is_not_found_try_again">Location is not found. Try Again</string>
 </resources>
