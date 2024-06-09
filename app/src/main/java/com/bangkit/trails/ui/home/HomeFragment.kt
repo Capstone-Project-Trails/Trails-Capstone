@@ -19,10 +19,15 @@ import com.bangkit.trails.ui.detail.DetailActivity
 import com.bangkit.trails.ui.search.SearchActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
 import java.util.Locale
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var auth: FirebaseAuth
+
     private val binding get() = _binding as FragmentHomeBinding
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
@@ -37,6 +42,11 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        auth = Firebase.auth
+        val user = auth.currentUser
+
+        binding.homeHello.text = getString(R.string.home_hello, user?.displayName)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
         getMyLocation()
@@ -95,7 +105,7 @@ class HomeFragment : Fragment() {
                 } else {
                     Toast.makeText(
                         requireActivity(),
-                        "Location is not found. Try Again",
+                        getString(R.string.location_is_not_found_try_again),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
