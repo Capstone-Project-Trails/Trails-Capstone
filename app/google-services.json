@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "476530847707",
+    "project_id": "trails-238e9",
+    "storage_bucket": "trails-238e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476530847707:android:2fb05e1f7744fb4242c1fe",
+        "android_client_info": {
+          "package_name": "com.bangkit.trails"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476530847707-9ivlus3vi65o2umj1ctpsccl3p888e02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bangkit.trails",
+            "certificate_hash": "843bdef452dfc054774c52a451ec5bba20a164b8"
+          }
+        },
+        {
+          "client_id": "476530847707-f2f9nrqc57bbqiu3ml96hnjm4mf35eh3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuFySTT8NamJgo-F0wYWRHPvxt36jFNa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476530847707-f2f9nrqc57bbqiu3ml96hnjm4mf35eh3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
