@@ -32,11 +32,7 @@
     <string name="no">No</string>
     <string name="searchbar_hint">Masukkan kata</string>
     <string name="tab_text_1">Description</string>
-    <string name="tab_text_2">Locations</string>
-    <string name="tab_text_3">Reviews</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_2">Location</string>
 
     <string name="aichat_placeholder">Type Your Message Here…</string>
     <string name="aichat_title">Trails AI Mode</string>
@@ -47,8 +43,57 @@
     <string name="search_filter">Search Filter</string>
     <string name="sort_by">Sort by</string>
     <string name="cd_search_filter">search filter</string>
-    <string name="popular_destination">Popular Destination</string>
-    <string name="web_client_id">476530847707-f2f9nrqc57bbqiu3ml96hnjm4mf35eh3.apps.googleusercontent.com</string>
+    <string name="popular_destination">Search Result</string>
+    <string name="web_client_id">852171246469-d8chh8tev3jvsij2sg0a613rfefj6nb3.apps.googleusercontent.com</string>
     <string name="home_hello">Hello, %1$s</string>
     <string name="location_is_not_found_try_again">Location is not found. Try Again</string>
+    <string name="go_to_maps">Go to maps</string>
+    <string name="location_fragment">Location</string>
+    <string name="cd_destination_image">destination image</string>
+    <string name="description_fragment">Description</string>
+    <string name="instruction_filter">You can personalize your search by choosing filters like rating, distance, type of place, or region. Once you\'ve set your preferences, simply apply the filters and search again. Happy exploring!</string>
+    <string name="region_title">Region</string>
+    <string name="region_place_label">Region Place</string>
+    <string name="type_title">Type</string>
+    <string name="type_place_label">Type Place</string>
+    <string name="rating_title">Rating</string>
+    <string name="range_rating_label">Range Rating</string>
+    <string name="apply">Apply</string>
+    <string name="empty_search">Sorry, I didn\'t find what you need. Let\'s try something else</string>
+    <string name="userRatingTotal">(%1$s Review)</string>
+    <string name="address_detail">%1$s, %2$s</string>
+
+    <string-array name="dropdown_ratings">
+        <item>All Ranges</item> <!-- Placeholder -->
+        <item>4-5</item>
+        <item>3-4</item>
+        <item>2-3</item>
+        <item>1-2</item>
+        <item>0-1</item>
+    </string-array>
+
+    <string-array name="dropdown_types">
+        <item>All Types</item> <!-- Placeholder -->
+        <item>tourist attraction</item>
+        <item>restaurant</item>
+        <item>lodging</item>
+        <item>hospital</item>
+        <item>bar</item>
+        <item>cafe</item>
+        <item>store</item>
+    </string-array>
+
+    <string-array name="dropdown_regions">
+        <item>All Regions</item> <!-- Placeholder -->
+        <item>Candidasa</item>
+        <item>Canggu</item>
+        <item>Jimbaran</item>
+        <item>Kuta</item>
+        <item>Lovina</item>
+        <item>Nusa Dua</item>
+        <item>Sanur</item>
+        <item>Seminyak</item>
+        <item>Ubud</item>
+        <item>Uluwatu</item>
+    </string-array>
 </resources>

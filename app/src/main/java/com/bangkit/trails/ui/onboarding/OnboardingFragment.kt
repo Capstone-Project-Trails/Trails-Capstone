@@ -1,4 +1,4 @@
-package com.bangkit.trails.ui.onboarding
+package com.bangkitcapstone.trails.ui.onboarding
 
 import android.content.Context
 import android.content.Intent
@@ -7,15 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bangkit.trails.R
-import com.bangkit.trails.databinding.FragmentOnboardingBinding
-import com.bangkit.trails.ui.welcome.WelcomeActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.databinding.FragmentOnboardingBinding
+import com.bangkitcapstone.trails.ui.welcome.WelcomeActivity
 
 class OnboardingFragment : Fragment() {
     private var _binding: FragmentOnboardingBinding? = null
     private val binding get() = _binding as FragmentOnboardingBinding
-    var position = 0
-    var username = ""
+    private var position = 0
+    private var username = ""
     private var viewPagerNavigation: ViewPagerNavigation? = null
 
     interface ViewPagerNavigation {
@@ -128,13 +128,13 @@ class OnboardingFragment : Fragment() {
         }
     }
 
-    companion object {
-        const val ARG_SECTION_NUMBER = "section_number"
-        const val ARG_NAME = "app_name"
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+
+    companion object {
+        const val ARG_SECTION_NUMBER = "section_number"
+        const val ARG_NAME = "app_name"
     }
 }

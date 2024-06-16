@@ -1,11 +1,11 @@
-package com.bangkit.trails.ui.splash
+package com.bangkitcapstone.trails.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.bangkit.trails.R
-import com.bangkit.trails.ui.onboarding.OnboardingActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.ui.onboarding.OnboardingActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

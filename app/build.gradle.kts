@@ -2,20 +2,22 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("kotlin-parcelize")
 }
 
 android {
-    namespace = "com.bangkit.trails"
+    namespace = "com.bangkitcapstone.trails"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bangkit.trails"
+        applicationId = "com.bangkitcapstone.trails"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "BASE_URL", "\"https://recommendation-api-uopunblezq-et.a.run.app/api/\"")
     }
 
     buildTypes {
@@ -36,6 +38,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -71,5 +74,16 @@ dependencies {
 
     //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    //viewmodel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
+
+    //livedata
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
 
 }

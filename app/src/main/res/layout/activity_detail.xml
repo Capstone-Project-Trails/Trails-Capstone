@@ -58,12 +58,11 @@
 
             <TextView
                 android:id="@+id/detail_title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Pantai Kuta"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,9 +72,8 @@
                 android:id="@+id/detail_location"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginHorizontal="24dp"
                 android:fontFamily="@font/poppins_regular"
-                android:text="Bali - Indonesia"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/detail_title" />
@@ -87,7 +85,6 @@
                 android:layout_marginStart="24dp"
                 android:drawablePadding="5dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="4.9"
                 android:textSize="16sp"
                 app:drawableStartCompat="@drawable/star_review"
                 app:layout_constraintStart_toStartOf="parent"
@@ -100,9 +97,8 @@
                 android:layout_marginStart="5dp"
                 android:fontFamily="@font/poppins_regular"
                 android:padding="2dp"
-                android:text="(21 Review)"
                 android:textColor="@color/gray"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 app:layout_constraintStart_toEndOf="@id/detail_rating"
                 app:layout_constraintTop_toBottomOf="@id/detail_location" />
 

@@ -1,4 +1,4 @@
-package com.bangkit.trails.ui.home
+package com.bangkitcapstone.trails.ui.home
 
 import android.Manifest
 import android.content.Intent
@@ -13,10 +13,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
-import com.bangkit.trails.R
-import com.bangkit.trails.databinding.FragmentHomeBinding
-import com.bangkit.trails.ui.detail.DetailActivity
-import com.bangkit.trails.ui.search.SearchActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.databinding.FragmentHomeBinding
+import com.bangkitcapstone.trails.ui.detail.DetailActivity
+import com.bangkitcapstone.trails.ui.search.SearchActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.firebase.Firebase

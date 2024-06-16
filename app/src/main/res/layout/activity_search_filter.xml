@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.searchfilter.SearchFilterActivity">
 
     <ImageView
@@ -30,15 +31,152 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/sort_by"
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:justificationMode="inter_word"
+        android:text="@string/instruction_filter"
+        android:textSize="14sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/close" />
+
+    <TextView
+        android:id="@+id/region"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/sort_by"
+        android:text="@string/region_title"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/close" />
+        app:layout_constraintTop_toBottomOf="@id/instruction" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dd_regions"
+        style="@style/ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/region_place_label"
+        android:textColorHint="@color/gray"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/region"
+        app:placeholderText="Give your region place"
+        app:placeholderTextColor="@color/gray">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/opt_region"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            app:dropDownBackgroundTint="@color/white"
+            app:simpleItems="@array/dropdown_regions" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/type_title"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dd_regions" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dd_type"
+        style="@style/ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/type_place_label"
+        android:textColorHint="@color/gray"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/type"
+        app:placeholderText="Give your type place"
+        app:placeholderTextColor="@color/gray">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/opt_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            app:dropDownBackgroundTint="@color/white"
+            app:simpleItems="@array/dropdown_types" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/rating_title"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dd_type" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dd_rating"
+        style="@style/ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/range_rating_label"
+        android:textColorHint="@color/gray"
+        app:boxCornerRadiusBottomEnd="10sp"
+        app:boxCornerRadiusBottomStart="10sp"
+        app:boxCornerRadiusTopEnd="10sp"
+        app:boxCornerRadiusTopStart="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rating"
+        app:placeholderText="Give your rating range">
+
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            android:id="@+id/opt_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            app:dropDownBackgroundTint="@color/white"
+            app:simpleItems="@array/dropdown_ratings" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/blue_button"
+        android:contentDescription="@string/next_button"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingVertical="10dp"
+        android:text="@string/apply"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

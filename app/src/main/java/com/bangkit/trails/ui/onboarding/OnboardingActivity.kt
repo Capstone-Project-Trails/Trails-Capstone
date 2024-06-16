@@ -1,12 +1,12 @@
-package com.bangkit.trails.ui.onboarding
+package com.bangkitcapstone.trails.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.bangkit.trails.R
-import com.bangkit.trails.adapter.SectionsPagerAdapter
-import com.bangkit.trails.ui.main.MainActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.adapter.SectionsPagerAdapter
+import com.bangkitcapstone.trails.ui.main.MainActivity
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth

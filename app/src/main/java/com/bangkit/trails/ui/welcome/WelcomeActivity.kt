@@ -1,4 +1,4 @@
-package com.bangkit.trails.ui.welcome
+package com.bangkitcapstone.trails.ui.welcome
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -10,10 +10,10 @@ import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
 import androidx.credentials.exceptions.GetCredentialException
 import androidx.lifecycle.lifecycleScope
-import com.bangkit.trails.R
-import com.bangkit.trails.ui.main.MainActivity
-import com.bangkit.trails.databinding.ActivityWelcomeBinding
-import com.bangkit.trails.ui.onboarding.OnboardingActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.ui.main.MainActivity
+import com.bangkitcapstone.trails.databinding.ActivityWelcomeBinding
+import com.bangkitcapstone.trails.ui.onboarding.OnboardingActivity
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingException
