@@ -1,10 +1,10 @@
-package com.bangkit.trails.adapter
+package com.bangkitcapstone.trails.adapter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.bangkit.trails.ui.onboarding.OnboardingFragment
+import com.bangkitcapstone.trails.ui.onboarding.OnboardingFragment
 
 class SectionsPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 

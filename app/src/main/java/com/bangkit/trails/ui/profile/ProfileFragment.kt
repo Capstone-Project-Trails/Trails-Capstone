@@ -1,4 +1,4 @@
-package com.bangkit.trails.ui.profile
+package com.bangkitcapstone.trails.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,9 +10,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.credentials.ClearCredentialStateRequest
 import androidx.credentials.CredentialManager
 import androidx.lifecycle.lifecycleScope
-import com.bangkit.trails.R
-import com.bangkit.trails.databinding.FragmentProfileBinding
-import com.bangkit.trails.ui.welcome.WelcomeActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.databinding.FragmentProfileBinding
+import com.bangkitcapstone.trails.ui.welcome.WelcomeActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth

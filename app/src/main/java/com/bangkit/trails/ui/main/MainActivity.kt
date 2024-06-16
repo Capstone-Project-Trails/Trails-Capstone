@@ -1,4 +1,4 @@
-package com.bangkit.trails.ui.main
+package com.bangkitcapstone.trails.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.bangkit.trails.R
-import com.bangkit.trails.databinding.ActivityMainBinding
-import com.bangkit.trails.ui.aichat.AIChatActivity
+import com.bangkitcapstone.trails.R
+import com.bangkitcapstone.trails.databinding.ActivityMainBinding
+import com.bangkitcapstone.trails.ui.aichat.AIChatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

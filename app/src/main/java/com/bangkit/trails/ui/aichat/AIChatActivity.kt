@@ -1,8 +1,8 @@
-package com.bangkit.trails.ui.aichat
+package com.bangkitcapstone.trails.ui.aichat
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bangkit.trails.databinding.ActivityAichatBinding
+import com.bangkitcapstone.trails.databinding.ActivityAichatBinding
 
 class AIChatActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAichatBinding
