@@ -16,5 +16,10 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/blue_button</item>
+        <item name="hintTextColor">@color/blue_button</item>
+    </style>
+
     <style name="Theme.Trails" parent="Base.Theme.Trails" />
 </resources>
