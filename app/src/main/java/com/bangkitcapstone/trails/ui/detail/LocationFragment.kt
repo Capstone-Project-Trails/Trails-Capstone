@@ -3,11 +3,10 @@ package com.bangkitcapstone.trails.ui.detail
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bangkitcapstone.trails.R
+import androidx.fragment.app.Fragment
 import com.bangkitcapstone.trails.databinding.FragmentLocationBinding
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -16,7 +15,9 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
+
 class LocationFragment : Fragment(), OnMapReadyCallback {
+    //class LocationFragment : Fragment() {
     private lateinit var mMap: GoogleMap
 
     private var _binding: FragmentLocationBinding? = null
@@ -25,7 +26,6 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
     private var title = ""
     private var lat = 0.0
     private var long = 0.0
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -54,8 +54,9 @@ class LocationFragment : Fragment(), OnMapReadyCallback {
         }
 
         val mapFragment = childFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
+            .findFragmentById(com.bangkitcapstone.trails.R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+
     }
 
 
