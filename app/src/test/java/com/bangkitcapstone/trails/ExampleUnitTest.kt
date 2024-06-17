@@ -1,4 +1,4 @@
-package com.bangkit.trails
+package com.bangkitcapstone.trails
 
 import org.junit.Test
 
