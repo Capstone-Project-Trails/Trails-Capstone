@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.bangkitcapstone.trails.data.repository.TrailsRepository
 import com.bangkitcapstone.trails.di.Injection
+import com.bangkitcapstone.trails.ui.home.HomeViewModel
 import com.bangkitcapstone.trails.ui.search.SearchViewModel
 
 class ViewModelFactory private constructor(private val trailsRepository: TrailsRepository) :
@@ -12,6 +13,8 @@ class ViewModelFactory private constructor(private val trailsRepository: TrailsR
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(SearchViewModel::class.java)) {
             return SearchViewModel(trailsRepository) as T
+        } else if (modelClass.isAssignableFrom(HomeViewModel::class.java)) {
+            return HomeViewModel(trailsRepository) as T
         }
 
         throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)

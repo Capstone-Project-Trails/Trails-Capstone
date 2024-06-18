@@ -62,9 +62,16 @@
     <string name="empty_search">Sorry, I didn\'t find what you need. Let\'s try something else</string>
     <string name="userRatingTotal">(%1$s Review)</string>
     <string name="address_detail">%1$s, %2$s</string>
+    <string name="home_popular_title">Popular Destination</string>
+    <string name="home_nearby_title">Nearby</string>
+    <string name="cd_nearby">nearby destination</string>
+    <string name="loading_nearby">loading nearby destination</string>
+    <string name="home_popular">popular destination</string>
+    <string name="loading_popular_destination">loading popular destination</string>
+    <string name="search_destination_placeholder">search destination</string>
 
     <string-array name="dropdown_ratings">
-        <item>All Ranges</item> <!-- Placeholder -->
+        <item>All Ranges</item>
         <item>4-5</item>
         <item>3-4</item>
         <item>2-3</item>
@@ -73,7 +80,7 @@
     </string-array>
 
     <string-array name="dropdown_types">
-        <item>All Types</item> <!-- Placeholder -->
+        <item>All Types</item>
         <item>tourist attraction</item>
         <item>restaurant</item>
         <item>lodging</item>
@@ -84,7 +91,7 @@
     </string-array>
 
     <string-array name="dropdown_regions">
-        <item>All Regions</item> <!-- Placeholder -->
+        <item>All Regions</item>
         <item>Candidasa</item>
         <item>Canggu</item>
         <item>Jimbaran</item>

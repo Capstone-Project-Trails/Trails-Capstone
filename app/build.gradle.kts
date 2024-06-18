@@ -86,4 +86,6 @@ dependencies {
     //livedata
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
 
+    //shimmering
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }

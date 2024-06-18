@@ -6,17 +6,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bangkitcapstone.trails.data.remote.response.ResultsItem
-import com.bangkitcapstone.trails.databinding.ItemDestinationBinding
+import com.bangkitcapstone.trails.data.remote.response.NearbyItem
+import com.bangkitcapstone.trails.databinding.ItemNearbyBinding
 import com.bangkitcapstone.trails.ui.detail.DetailActivity
 import com.bangkitcapstone.trails.utils.toDetailData
 
-class DestinationAdapter :
-    ListAdapter<ResultsItem, DestinationAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class NearbyAdapter :
+    ListAdapter<NearbyItem, NearbyAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val binding =
-            ItemDestinationBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemNearbyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MyViewHolder(binding)
     }
 
@@ -25,13 +25,12 @@ class DestinationAdapter :
         holder.bind(item)
     }
 
-    class MyViewHolder(val binding: ItemDestinationBinding) :
+    class MyViewHolder(val binding: ItemNearbyBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: ResultsItem) {
-            binding.destName.text = item.title
-            binding.destLocation.text = item.region
-            binding.destRating.text = item.rating
-            binding.destDesc.text = item.description
+        fun bind(item: NearbyItem) {
+            binding.nearbyName.text = item.name
+            binding.nearbyRating.text = item.rating
+            binding.nearbyLocation.text = item.vicinity
 //            Glide.with(itemView.context).load(item.avatarUrl).into(binding.destImage)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
@@ -45,12 +44,12 @@ class DestinationAdapter :
     companion object {
         private const val DATA = "data_detail_trails"
 
-        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<ResultsItem>() {
-            override fun areItemsTheSame(oldItem: ResultsItem, newItem: ResultsItem): Boolean {
+        val DIFF_CALLBACK = object : DiffUtil.ItemCallback<NearbyItem>() {
+            override fun areItemsTheSame(oldItem: NearbyItem, newItem: NearbyItem): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: ResultsItem, newItem: ResultsItem): Boolean {
+            override fun areContentsTheSame(oldItem: NearbyItem, newItem: NearbyItem): Boolean {
                 return oldItem == newItem
             }
         }
