@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bangkitcapstone.trails.data.remote.response.ResultsItem
 import com.bangkitcapstone.trails.databinding.ItemDestinationBinding
 import com.bangkitcapstone.trails.ui.detail.DetailActivity
+import com.bangkitcapstone.trails.utils.toDetailData
 
 class DestinationAdapter :
     ListAdapter<ResultsItem, DestinationAdapter.MyViewHolder>(DIFF_CALLBACK) {
@@ -34,7 +35,8 @@ class DestinationAdapter :
 //            Glide.with(itemView.context).load(item.avatarUrl).into(binding.destImage)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
-                intent.putExtra(DATA, item)
+                val detailData = item.toDetailData()
+                intent.putExtra(DATA, detailData)
                 itemView.context.startActivity(intent)
             }
         }
