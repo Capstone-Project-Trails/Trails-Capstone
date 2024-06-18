@@ -19,10 +19,10 @@ data class SearchResponse(
 @Parcelize
 data class Coordinates(
     @field:SerializedName("latitude")
-    val latitude: String? = null,
+    val latitude: Double,
 
     @field:SerializedName("longitude")
-    val longitude: String? = null
+    val longitude: Double,
 ) : Parcelable
 
 @Parcelize
@@ -35,7 +35,7 @@ data class ResultsItem(
     val formattedAddress: String,
 
     @field:SerializedName("link")
-    val link: String? = null,
+    val link: String,
 
     @field:SerializedName("rating")
     val rating: String,
