@@ -31,34 +31,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_chatHistory"
+        android:id="@+id/rv_chat"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginVertical="16dp"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@id/til_inputTextLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/title"
-        tools:listitem="@layout/item_message_user" />
-
-    <View
-        android:id="@+id/shadow"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_above="@id/til_inputTextLayout"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/shadow"
-        app:layout_constraintBottom_toTopOf="@id/til_inputTextLayout" />
+        tools:listitem="@layout/item_chat" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_inputTextLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
         android:hint="@string/aichat_placeholder"
         app:boxCornerRadiusBottomEnd="24dp"
         app:boxCornerRadiusBottomStart="24dp"
@@ -66,29 +57,35 @@
         app:boxCornerRadiusTopStart="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guideline8"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:placeholderText="@string/aichat_placeholder"
+        app:placeholderTextAppearance="@font/poppins_light"
+        app:placeholderTextColor="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tiet_inputTextEditText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textCapSentences" />
+            android:hint=""
+            android:inputType="textCapSentences"
+            android:textSize="14sp"
+            app:placeholderText="@string/aichat_placeholder"
+            app:placeholderTextColor="@color/black" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_send"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/blue_button"
-        android:drawableEnd="@drawable/send"
+        android:drawableRight="@drawable/send"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline8"
-
-        />
+        app:layout_constraintStart_toEndOf="@id/guideline8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"

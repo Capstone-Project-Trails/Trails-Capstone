@@ -19,8 +19,8 @@
             android:id="@+id/popular_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
             android:contentDescription="@string/home_popular"
+            android:scaleType="centerCrop"
             android:src="@drawable/beach_afternoon"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
@@ -43,6 +43,7 @@
             android:layout_marginHorizontal="16dp"
             android:fontFamily="@font/poppins_medium"
             android:textColor="@color/white"
+            android:background="@color/transparent"
             android:textSize="16sp"
             card_view:layout_constraintBottom_toTopOf="@id/popular_loc"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -50,14 +51,16 @@
 
         <TextView
             android:id="@+id/popular_loc"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/poppins_regular"
             android:textColor="@color/white"
+            android:background="@color/transparent"
             android:textSize="12sp"
             card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="@+id/popular_title"
             card_view:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

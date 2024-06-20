@@ -1,5 +1,6 @@
 package com.bangkitcapstone.trails.data.remote.retrofit
 
+import com.bangkitcapstone.trails.data.remote.response.AIChatResponse
 import com.bangkitcapstone.trails.data.remote.response.DestinationResponse
 import com.bangkitcapstone.trails.data.remote.response.SearchResponse
 import retrofit2.http.GET
@@ -22,4 +23,9 @@ interface ApiService {
         @Query("lat") lat: String,
         @Query("lon") lon: String
     ): DestinationResponse
+
+    @GET("chat")
+    suspend fun getResponse(
+        @Query("message") message: String,
+    ) : AIChatResponse
 }
