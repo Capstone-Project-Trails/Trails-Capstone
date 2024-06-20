@@ -12,6 +12,7 @@ import androidx.credentials.CredentialManager
 import androidx.lifecycle.lifecycleScope
 import com.bangkitcapstone.trails.R
 import com.bangkitcapstone.trails.databinding.FragmentProfileBinding
+import com.bangkitcapstone.trails.ui.favorite.FavoriteActivity
 import com.bangkitcapstone.trails.ui.welcome.WelcomeActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.Firebase
@@ -42,8 +43,13 @@ class ProfileFragment : Fragment() {
         val photoUrl = user?.photoUrl.toString()
         val highResPhotoUrl = photoUrl.replace("s96-c", "s200-c")
 
-        binding.profileName.text = "${user?.displayName}"
+        binding.profileName.text = user?.displayName
         Glide.with(this).load(highResPhotoUrl).into(binding.profileImage)
+
+        binding.wishlist.setOnClickListener {
+            val intent = Intent(requireActivity(), FavoriteActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.logout.setOnClickListener {
             AlertDialog.Builder(requireActivity()).apply {
