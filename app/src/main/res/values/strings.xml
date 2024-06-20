@@ -22,7 +22,6 @@
     <string name="home_title">Lets Explore New Experience With Us!</string>
     <string name="search_placeholder">Where do you want to go?</string>
 
-    <string name="location_value">%1$s, %2$s</string>
     <string name="home_bottombar">Home</string>
     <string name="profile_bottombar">Profile</string>
     <string name="cd_ai_chat">Ketuk untuk ke AI Chat</string>
@@ -30,9 +29,6 @@
     <string name="info_logout">Are you sure you want to log out of this account?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="searchbar_hint">Masukkan kata</string>
-    <string name="tab_text_1">Description</string>
-    <string name="tab_text_2">Location</string>
 
     <string name="aichat_placeholder">Type Your Message Here…</string>
     <string name="aichat_title">Trails AI Mode</string>
@@ -41,7 +37,6 @@
     <string name="cd_detail">detail image destination</string>
     <string name="cd_close">close page</string>
     <string name="search_filter">Search Filter</string>
-    <string name="sort_by">Sort by</string>
     <string name="cd_search_filter">search filter</string>
     <string name="popular_destination">Search Result</string>
     <string name="web_client_id">852171246469-d8chh8tev3jvsij2sg0a613rfefj6nb3.apps.googleusercontent.com</string>
@@ -103,4 +98,12 @@
         <item>Ubud</item>
         <item>Uluwatu</item>
     </string-array>
+
+    <string name="your_location_bali">Bali, Indonesia</string>
+    <string name="cd_favorite">favorite</string>
+    <string name="title_favorites">My Favorites</string>
+    <string name="empty_favorite">Apparently, you haven\'t found your favorite destination yet.</string>
+    <string name="loading_aichat">Loading...</string>
+    <string name="missing_aichat">Sorry, I didn\'t understand that. Can you please rephrase?</string>
+    <string name="initial_aichat">Hi, welcome to Trails AI Model.\nTry things like:\n1. Find a restaurant in Uluwatu\n2. Cheap hotels in Seminyak\n3. Hotels near Seminyak in Kerobokan</string>
 </resources>
