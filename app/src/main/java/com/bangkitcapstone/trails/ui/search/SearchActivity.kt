@@ -90,6 +90,7 @@ class SearchActivity : AppCompatActivity() {
                                     binding.popularDestination.visibility = View.GONE
                                     binding.emptySearch.visibility = View.GONE
                                     binding.rvDestination.visibility = View.GONE
+                                    binding.animEmpty.visibility = View.GONE
 
                                     showLoading(true)
                                 }
@@ -100,6 +101,7 @@ class SearchActivity : AppCompatActivity() {
                                     binding.rvDestination.visibility = View.VISIBLE
 
                                     if (result.data.isEmpty()) {
+                                        binding.animEmpty.visibility = View.VISIBLE
                                         binding.emptySearch.visibility = View.VISIBLE
                                     } else {
                                         binding.popularDestination.visibility = View.VISIBLE
@@ -125,9 +127,9 @@ class SearchActivity : AppCompatActivity() {
     }
 
 
-    private fun setSearchData(listDatas: List<ResultsItem>) {
+    private fun setSearchData(listData: List<ResultsItem>) {
         val adapter = DestinationAdapter()
-        adapter.submitList(listDatas)
+        adapter.submitList(listData)
         binding.rvDestination.adapter = adapter
     }
 

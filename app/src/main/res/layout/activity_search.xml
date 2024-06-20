@@ -38,6 +38,7 @@
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/transparent"
         android:hint="@string/search_placeholder"
         app:layout_anchor="@id/searchBar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,21 +72,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchBar" />
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_empty"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/empty_search"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="emptybox.json"
+        app:lottie_loop="true" />
+
     <TextView
         android:id="@+id/empty_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/empty_search"
         android:textAlignment="center"
         android:textSize="16sp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/anim_empty" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDestination"

@@ -16,14 +16,6 @@ data class SearchResponse(
     val results: List<ResultsItem>,
 )
 
-@Parcelize
-data class Coordinates(
-    @field:SerializedName("latitude")
-    val latitude: Double,
-
-    @field:SerializedName("longitude")
-    val longitude: Double,
-) : Parcelable
 
 @Parcelize
 data class ResultsItem(
@@ -42,6 +34,9 @@ data class ResultsItem(
 
     @field:SerializedName("coordinates")
     val coordinates: Coordinates,
+
+    @field:SerializedName("photo_url")
+    val photoUrl: String? = null,
 
     @field:SerializedName("description")
     val description: String,
