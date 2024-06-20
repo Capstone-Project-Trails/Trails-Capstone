@@ -10,6 +10,7 @@ import com.bangkitcapstone.trails.data.remote.response.NearbyItem
 import com.bangkitcapstone.trails.databinding.ItemNearbyBinding
 import com.bangkitcapstone.trails.ui.detail.DetailActivity
 import com.bangkitcapstone.trails.utils.toDetailData
+import com.bumptech.glide.Glide
 
 class NearbyAdapter :
     ListAdapter<NearbyItem, NearbyAdapter.MyViewHolder>(DIFF_CALLBACK) {
@@ -31,7 +32,7 @@ class NearbyAdapter :
             binding.nearbyName.text = item.name
             binding.nearbyRating.text = item.rating
             binding.nearbyLocation.text = item.vicinity
-//            Glide.with(itemView.context).load(item.avatarUrl).into(binding.destImage)
+            Glide.with(itemView.context).load(item.photoUrl).into(binding.nearbyImage)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
                 val detailData = item.toDetailData()

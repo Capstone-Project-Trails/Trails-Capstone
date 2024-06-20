@@ -1,5 +1,6 @@
 package com.bangkitcapstone.trails.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -7,6 +8,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bangkitcapstone.trails.data.remote.response.PopularDestinationsItem
 import com.bangkitcapstone.trails.databinding.ItemPopularBinding
+import com.bangkitcapstone.trails.ui.detail.DetailActivity
+import com.bangkitcapstone.trails.utils.toDetailData
+import com.bumptech.glide.Glide
 
 class PopularAdapter :
     ListAdapter<PopularDestinationsItem, PopularAdapter.MyViewHolder>(DIFF_CALLBACK) {
@@ -26,8 +30,17 @@ class PopularAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: PopularDestinationsItem) {
             binding.popularTitle.text = item.name
-            binding.popularLoc.text = item.vicinity
-//            Glide.with(itemView.context).load(item.avatarUrl).into(binding.destImage)
+            binding.popularLoc.text = item.region
+            Glide.with(itemView.context)
+                .load(item.photos)
+                .timeout(10000)
+                .into(binding.popularImage)
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailActivity::class.java)
+                val detailData = item.toDetailData()
+                intent.putExtra(DATA, detailData)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 
