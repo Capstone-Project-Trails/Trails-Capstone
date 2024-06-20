@@ -1,11 +1,14 @@
 package com.bangkitcapstone.trails.ui.home
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
+import android.location.LocationManager
 import android.os.Bundle
+import android.provider.Settings
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +16,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.location.LocationManagerCompat
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -102,10 +106,23 @@ class HomeFragment : Fragment() {
         when {
             permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: false -> {
                 getMyLocation()
+
+                val locationManager =
+                    context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+                if (!LocationManagerCompat.isLocationEnabled(locationManager)) {
+                    startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                }
             }
 
             permissions[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false -> {
                 getMyLocation()
+
+                val locationManager =
+                    context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+                if (!LocationManagerCompat.isLocationEnabled(locationManager)) {
+                    startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                }
+
             }
 
             else -> {
@@ -163,6 +180,10 @@ class HomeFragment : Fragment() {
                         }
                     }
                 } else {
+                    binding.rvNearby.visibility = View.GONE
+                    binding.nearby.visibility = View.GONE
+                    binding.progressBarNearby.visibility = View.GONE
+
                     Toast.makeText(
                         requireActivity(),
                         getString(R.string.location_is_not_found_try_again),
