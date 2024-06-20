@@ -59,10 +59,9 @@ class FavoriteActivity : AppCompatActivity() {
                     val userRatingTotal = doc["total_reviews"] as String
                     val title = doc["title"] as String
                     val region = doc["region"] as String? ?: ""
-                    val vicinity = doc["vicinity"] as String? ?: ""
-                    val coordinatesDoc = doc["coordinates"] as Map<*, *>?
-                    val latitude = coordinatesDoc?.get("latitude") as Double? ?: 0.0
-                    val longitude = coordinatesDoc?.get("longitude") as Double? ?: 0.0
+                    val vicinity = doc["vicinity"] as String?
+                    val latitude = doc["lat"] as Double
+                    val longitude = doc["lon"] as Double
                     val coordinates = Coordinates(latitude, longitude)
 
                     val detailData = DetailData(
