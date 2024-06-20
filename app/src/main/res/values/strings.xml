@@ -18,6 +18,7 @@
     <string name="picture_beach">picture beach</string>
     <string name="your_location">Your Location</string>
     <string name="location">Location Not Found</string>
+    <string name="location_value">%1$s, %2$s</string>
     <string name="hello">Hello, Budi</string>
     <string name="home_title">Lets Explore New Experience With Us!</string>
     <string name="search_placeholder">Where do you want to go?</string>
@@ -99,7 +100,6 @@
         <item>Uluwatu</item>
     </string-array>
 
-    <string name="your_location_bali">Bali, Indonesia</string>
     <string name="cd_favorite">favorite</string>
     <string name="title_favorites">My Favorites</string>
     <string name="empty_favorite">Apparently, you haven\'t found your favorite destination yet.</string>
