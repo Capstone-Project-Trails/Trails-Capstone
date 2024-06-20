@@ -55,8 +55,11 @@ data class NearbyItem(
     @field:SerializedName("region")
     val region: String? = null,
 
+    @field:SerializedName("photo_url")
+    val photoUrl: String? = null,
+
     @field:SerializedName("place_id")
-    val placeId: String? = null,
+    val placeId: String,
 
     @field:SerializedName("lat")
     val lat: Double,
@@ -67,6 +70,9 @@ data class PopularDestinationsItem(
 
     @field:SerializedName("locationUrl")
     val locationUrl: String,
+
+    @field:SerializedName("description")
+    val description: String,
 
     @field:SerializedName("types")
     val types: String? = null,
@@ -80,6 +86,9 @@ data class PopularDestinationsItem(
     @field:SerializedName("user_rating_total")
     val userRatingTotal: String,
 
+    @field:SerializedName("region")
+    val region: String? = null,
+
     @field:SerializedName("vicinity")
     val vicinity: String? = null,
 
@@ -90,7 +99,7 @@ data class PopularDestinationsItem(
     val photos: String? = null,
 
     @field:SerializedName("place_id")
-    val placeId: String? = null,
+    val placeId: String,
 
     @field:SerializedName("lat")
     val lat: Double,
