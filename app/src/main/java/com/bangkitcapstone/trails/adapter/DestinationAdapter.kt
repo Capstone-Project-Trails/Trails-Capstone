@@ -10,6 +10,7 @@ import com.bangkitcapstone.trails.data.remote.response.ResultsItem
 import com.bangkitcapstone.trails.databinding.ItemDestinationBinding
 import com.bangkitcapstone.trails.ui.detail.DetailActivity
 import com.bangkitcapstone.trails.utils.toDetailData
+import com.bumptech.glide.Glide
 
 class DestinationAdapter :
     ListAdapter<ResultsItem, DestinationAdapter.MyViewHolder>(DIFF_CALLBACK) {
@@ -32,7 +33,7 @@ class DestinationAdapter :
             binding.destLocation.text = item.region
             binding.destRating.text = item.rating
             binding.destDesc.text = item.description
-//            Glide.with(itemView.context).load(item.avatarUrl).into(binding.destImage)
+            Glide.with(itemView.context).load(item.photoUrl).into(binding.destImage)
             itemView.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
                 val detailData = item.toDetailData()
