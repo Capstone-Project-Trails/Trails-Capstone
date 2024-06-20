@@ -42,8 +42,8 @@
         app:menu="@menu/bottom_nav_menu" />
 
     <View
-        android:layout_width="92dp"
-        android:layout_height="92dp"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
         android:layout_gravity="center"
         android:layout_marginBottom="2dp"
         android:background="@drawable/circle"
@@ -54,14 +54,14 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_ai"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
         android:layout_marginBottom="8dp"
         android:backgroundTint="@color/blue_button"
         android:contentDescription="@string/cd_ai_chat"
         android:foregroundGravity="bottom"
         android:scaleType="center"
-        app:fabCustomSize="80dp"
+        app:fabCustomSize="66dp"
         app:fabSize="normal"
         app:itemBackground="@color/transparent"
         app:layout_anchorGravity="bottom|end"
